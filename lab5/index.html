@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 5</title>
+    <style>
+      #container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        height: 200px;
+        background-color: lightgray;
+      }
+      .bola {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: purple;
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <p id="passa" onmouseover="passaDentro()" onmouseout="passaFora()">
+      1. Passa por aqui!
+    </p>
+
+    <p>
+      <span id="pinta">2. Dá-me cor!</span>
+      <button class="color" data-color="purple">Roxo</button>
+      <button class="color" data-color="orange">Laranja</button>
+      <button class="color" data-color="deeppink">Rosa</button>
+    </p>
+
+    <p>
+      3. Experimenta escrever... <input type="text" onkeydown="mudaCor(this)" />
+    </p>
+
+    <p>
+      4. Escolha uma cor:
+      <select id="corFundo">
+        <option value="white">White</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+      </select>
+    </p>
+
+    <p>
+      5.
+      <button id="incrementar">+</button>
+      <button id="decrementar">−</button>
+      <button id="reiniciar">Reiniciar</button>
+      <span id="contador">0</span>
+    </p>
+
+    <form id="formulario">
+      6.
+      <input id="nome" type="text" placeholder="Insira o seu nome" />
+      <input id="idade" type="number" placeholder="Insira a sua idade" />
+      <input type="submit" value="Submit" />
+    </form>
+    <p id="mensagem"></p>
+
+    <p>7. Automatic Counter: <span id="automatico">0</span></p>
+
+    <h2>Flex</h2>
+    <select id="direcao">
+      <option value="row">row</option>
+      <option value="row-reverse">row-reverse</option>
+      <option value="column">column</option>
+      <option value="column-reverse">column-reverse</option>
+    </select>
+
+    <div id="container">
+      <div class="bola"></div>
+      <div class="bola"></div>
+      <div class="bola"></div>
+      <div class="bola"></div>
+    </div>
+  </body>
+</html>
