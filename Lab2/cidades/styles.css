@@ -1,0 +1,44 @@
+*{
+    padding : 0px;
+    margin : 0px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+header{background-color: green; color:white;
+padding:50px;}
+
+main{background-color: pink; padding: 30px; height: 100vh;}
+footer{background-color: black; color: white; padding: 10px}
+
+main section{background-color: white; padding: 20px; border-radius: 3px}
+
+img{
+    width: 60%;
+    border-radius: 6px;
+}
+
+#localizacao header{background-color: aqua;}
+
+table, th, td{border: 1px solid black; border-collapse: collapse; padding: 8px;}
+
+#info aside{background-color: blueviolet; padding: 20px;}
+
+.Fotografias{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.Fotografias img{
+    width: 33%;
+    border-radius: 20px;
+}
+
+#multi section ul{list-style-type: none;}
+
+#multi section iframe{width: 150px; border-radius: 20px; height: auto;}
