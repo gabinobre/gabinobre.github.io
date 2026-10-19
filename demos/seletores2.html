@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Seletores 2 - Ana Gabriela Nobre</title>
+    <style>
+      main > div:first-child {
+        color: red;
+      }
+      div div:nth-child(2) {
+        color: blue;
+      }
+      div div + div {
+        color: green;
+      }
+      div + p {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>Vermelho</div>
+      <div>
+        <span>Preto</span>
+        <div>Azul</div>
+        <div>Verde</div>
+      </div>
+      <p>Violeta</p>
+      <p>Preto</p>
+      <p>Ana Gabriela Nobre</p>
+    </main>
+  </body>
+</html>

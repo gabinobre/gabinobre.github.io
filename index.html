@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,37 +8,57 @@
   </head>
   <body>
     <header>
-      <h1>Primeira Página Web!</h1>
+      <h2>Bem-vindos ao meu Website! <span>&#9776;</span></h2>
+      <nav>
+        <a href="#img">Início</a>
+        <a href="#lab">Labs</a>
+        <a href="#web">Disciplina</a>
+        <a href="demos/index.html">Demos</a>
+        <a href="videotutoriais.html">Videotutoriais</a>
+      </nav>
     </header>
     <main>
-      <p>Eis a minha primeira página Web!</p>
-      <p>
-        Na Unidade Curricular de
-        <a href="https://moodle.ensinolusofona.pt/course/view.php?id=27320">
-          Desenvolvimento de Interfaces Web
-        </a>
-        abordaremos a seguintes tecnologias Web &#127760;:
-      </p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React e Next.js</li>
-      </ul>
-      <p>Iremos criar soluções criativas!</p>
-      <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web" />
+      <section id="img">
+        <h1>Ana Gabriela Nobre</h1>
+      </section>
 
-      <section>
-        <h2>Laboratorios</h2>
+      <section id="lab">
+        <h2>Laboratórios</h2>
+        <p>Aqui estão os exercícios:</p>
         <nav>
           <a href="Lab1/cidades/index.html">Lab1</a>
           <a href="Lab2/cidades/index.html">Lab2</a>
-          <a>Lab3</a>
+          <a href="Lab3/cidades/index.html">Lab3</a>
         </nav>
+      </section>
+
+      <section id="web">
+        <h2>Desenvolvimento de Interfaces Web</h2>
+        <div>
+          <div>
+            <p>
+              Na Unidade Curricular de
+              <a
+                href="https://moodle.ensinolusofona.pt/course/view.php?id=27320"
+              >
+                Desenvolvimento de Interfaces Web
+              </a>
+              abordaremos as seguintes tecnologias Web &#127760;:
+            </p>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React e Next.js</li>
+            </ul>
+            <p>Iremos criar soluções criativas!</p>
+          </div>
+          <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web" />
+        </div>
       </section>
     </main>
     <footer>
-      <p>Universidade Lusofona 2025</p>
+      <p>Universidade Lusófona 2025</p>
     </footer>
   </body>
 </html>

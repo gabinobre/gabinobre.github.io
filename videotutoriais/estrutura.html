@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elementos estruturais HTML5 - Ana Gabriela Nobre</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f5e9d0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      header {
+        background-color: #da6c81;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      nav {
+        background-color: #bf2b54;
+        padding: 15px;
+        border-radius: 10px;
+        display: flex;
+        gap: 15px;
+      }
+
+      nav a {
+        color: white;
+      }
+
+      .meio {
+        display: flex;
+        gap: 10px;
+      }
+
+      main {
+        background-color: white;
+        border: 3px solid #da6c81;
+        padding: 20px;
+        border-radius: 10px;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      section {
+        background-color: #fbf3e4;
+        border: 2px dashed #bf2b54;
+        padding: 15px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      article {
+        background-color: #f5e9d0;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      aside {
+        background-color: #cc456b;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 30%;
+      }
+
+      footer {
+        background-color: #da6c81;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      .nome {
+        font-weight: bold;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p class="nome">&lt;header&gt;</p>
+      <h1>Elementos estruturais do HTML5</h1>
+      <p>O cabeçalho da página: título, logótipo, etc.</p>
+    </header>
+
+    <nav>
+      <span class="nome" style="color: white">&lt;nav&gt;</span>
+      <a href="#">Início</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contactos</a>
+    </nav>
+
+    <div class="meio">
+      <main>
+        <p class="nome">&lt;main&gt;</p>
+        <p>O conteúdo principal da página. Só existe um por página.</p>
+
+        <section>
+          <p class="nome">&lt;section&gt;</p>
+          <h2>Uma secção sobre Tokyo</h2>
+          <p>Agrupa conteúdos do mesmo tema.</p>
+
+          <article>
+            <p class="nome">&lt;article&gt;</p>
+            <h3>Flores de cerejeira</h3>
+            <p>
+              Conteúdo independente, que faz sentido sozinho, como uma notícia
+              ou um post.
+            </p>
+          </article>
+
+          <article>
+            <p class="nome">&lt;article&gt;</p>
+            <h3>Cruzamento de Shibuya</h3>
+            <p>Outro artigo dentro da mesma secção.</p>
+          </article>
+        </section>
+      </main>
+
+      <aside>
+        <p class="nome">&lt;aside&gt;</p>
+        <p>
+          Conteúdo à parte, relacionado com a página: curiosidades, links,
+          publicidade.
+        </p>
+      </aside>
+    </div>
+
+    <footer>
+      <p class="nome">&lt;footer&gt;</p>
+      <p>Rodapé - Ana Gabriela Nobre, Universidade Lusófona</p>
+    </footer>
+  </body>
+</html>

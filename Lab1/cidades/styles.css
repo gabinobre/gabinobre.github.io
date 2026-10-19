@@ -1,0 +1,64 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #da6c81;
+}
+
+/* ===== Header (igual ao da página principal) ===== */
+header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+    background-color: #da6c81;
+}
+
+header h1{
+    color: white;
+}
+
+header nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a{
+    background-color: #bf2b54;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: #cc456b;
+}
+
+/* ===== Conteúdo ===== */
+main{
+    background-color: #f5e9d0;
+    height: 70vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ===== Footer (igual ao da página principal) ===== */
+footer{
+    background-color: #da6c81;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}

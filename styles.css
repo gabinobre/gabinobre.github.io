@@ -1,3 +1,296 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+ header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+ }
+
+ header h2{
+    color: white;
+ }
+
+ header nav{
+    display: flex;
+    gap: 15px;
+ }
+
+ nav a{
+    background-color: #bf2b54;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+ }
+
+ nav a:hover{
+    background-color: #cc456b;
+ }
+
+ main section{
+    padding: 60px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
 body {
-    background-color: #b3b3b3;
+    background-color: #bf2b54;
+}
+
+header{
+    background-color: #da6c81;
+}
+
+main{
+    background-color: #f5e9d0;
+}
+
+footer{
+    background-color: #da6c81;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Início ===== */
+#img{
+    height: 100vh;
+    background-image: url(images/tokyo\ sakura.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#img h1{
+    background-color: #da6c81;
+    color: white;
+    font-size: 50px;
+    border: 4px solid beige;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+/* ===== Laboratórios ===== */
+#lab{
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+}
+
+#lab h2{
+    color: #bf2b54;
+    font-size: 40px;
+}
+
+#lab nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 30px;
+    gap: 25px;
+}
+
+#lab nav a{
+    padding: 25px;
+    border-radius: 15px;
+    border: 3px solid #da6c81;
+}
+
+/* ===== Disciplina ===== */
+#web{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #fbf3e4;
+}
+
+#web h2{
+    color: #bf2b54;
+    font-size: 40px;
+}
+
+#web > div{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+    border: 3px solid #da6c81;
+    border-radius: 20px;
+    padding: 40px;
+    font-size: 18px;
+}
+
+#web ul{
+    padding: 20px;
+}
+
+#web a{
+    color: #bf2b54;
+}
+
+#web img{
+    width: 300px;
+    height: auto;
+}
+
+/* ===== Página Demos ===== */
+#demos{
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+}
+
+#demos h1{
+    color: #bf2b54;
+    font-size: 40px;
+}
+
+#demos .cartoes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+#demos article{
+    background-color: white;
+    border: 3px solid #da6c81;
+    border-radius: 20px;
+    padding: 25px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#demos article h3{
+    color: #bf2b54;
+}
+
+#demos article p{
+    font-size: 17px;
+}
+
+#demos article a{
+    background-color: #bf2b54;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+#demos article a:hover{
+    background-color: #cc456b;
+}
+
+/* ===== Página Videotutoriais ===== */
+#videos{
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+}
+
+#videos h1{
+    color: #bf2b54;
+    font-size: 40px;
+}
+
+#videos .cartoes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+#videos article{
+    background-color: white;
+    border: 3px solid #da6c81;
+    border-radius: 20px;
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#videos article h3{
+    color: #bf2b54;
+}
+
+#videos article p{
+    font-size: 17px;
+}
+
+#videos iframe{
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 10px;
+}
+
+#videos article a{
+    background-color: #bf2b54;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+#videos article a:hover{
+    background-color: #cc456b;
+}
+
+header span{
+    display: none;
+}
+
+@media(max-width: 600px){
+    header span{
+        display: block;
+    }
+    header nav{
+        display: none;
+    }
+
+    header:hover nav{display: flex;}
+
+    header nav{
+        flex-direction: column;
+    }
+
+    main section{
+        padding: 30px;
+    }
+
+    #img h1{
+        font-size: 30px;
+    }
+
+    #web div{
+        flex-direction: column;
+    }
+
+    #demos article{
+        width: 100%;
+    }
+
+    #videos article{
+        width: 100%;
+    }
 }

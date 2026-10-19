@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position - Ana Gabriela Nobre</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f5e9d0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      h1,
+      h2 {
+        color: #bf2b54;
+      }
+
+      section {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .caixa {
+        background-color: #da6c81;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      .relativa {
+        position: relative;
+        top: 10px;
+        left: 40px;
+        background-color: #bf2b54;
+      }
+
+      .pai {
+        position: relative;
+        background-color: #fbf3e4;
+        border: 2px dashed #da6c81;
+        border-radius: 10px;
+        height: 150px;
+      }
+
+      .absoluta {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: #bf2b54;
+      }
+
+      .foto {
+        position: relative;
+      }
+
+      .foto img {
+        width: 100%;
+        border-radius: 15px;
+        display: block;
+      }
+
+      .titulo {
+        position: absolute;
+        top: 40%;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 8vw;
+        font-weight: bold;
+        text-shadow: 2px 2px 8px black;
+      }
+
+      .etiqueta {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: #bf2b54;
+        color: white;
+        padding: 8px;
+        border-radius: 20px;
+      }
+
+      .legenda {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        background-color: white;
+        color: #bf2b54;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Position</h1>
+    <p>Por Ana Gabriela Nobre</p>
+
+    <section>
+      <h2>1. position: relative</h2>
+      <div class="caixa">Caixa normal (static)</div>
+      <div class="caixa relativa">Caixa relative: top 10px, left 40px</div>
+      <div class="caixa">Outra caixa normal</div>
+    </section>
+
+    <section>
+      <h2>2. position: absolute</h2>
+      <div class="pai">
+        <div class="caixa absoluta">Absolute: bottom 10px, right 10px</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Texto em cima de uma imagem</h2>
+      <div class="foto">
+        <img
+          src="../images/tokyo%20sakura.jpg"
+          alt="Tokyo com cerejeiras e o Monte Fuji"
+        />
+        <p class="titulo">Tokyo</p>
+        <p class="etiqueta">Primavera</p>
+        <p class="legenda">
+          Monte Fuji - foto escolhida por Ana Gabriela Nobre
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

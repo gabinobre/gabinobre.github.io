@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display flex - Ana Gabriela Nobre</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f5e9d0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      h1,
+      h2 {
+        color: #bf2b54;
+      }
+
+      section {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .contentor {
+        background-color: #fbf3e4;
+        border: 2px dashed #da6c81;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .item {
+        background-color: #da6c81;
+        color: white;
+        padding: 20px;
+        border: 3px solid white;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+
+      .ex1 {
+        display: flex;
+      }
+
+      .ex2 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ex3a {
+        display: flex;
+        justify-content: center;
+      }
+
+      .ex3b {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .ex4 {
+        display: flex;
+        align-items: center;
+        height: 150px;
+      }
+
+      .ex5 {
+        display: flex;
+        gap: 30px;
+      }
+
+      .ex6 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .ex6 .item {
+        width: 200px;
+      }
+
+      .ex7 {
+        display: flex;
+        gap: 10px;
+      }
+
+      .cresce {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Display: flex</h1>
+    <p>Por Ana Gabriela Nobre</p>
+
+    <section>
+      <h2>Sem flex</h2>
+      <div class="contentor">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>1. display: flex</h2>
+      <div class="contentor ex1">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. flex-direction: column</h2>
+      <div class="contentor ex2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. justify-content: center / space-between</h2>
+      <div class="contentor ex3a">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+      <div class="contentor ex3b">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. align-items: center</h2>
+      <div class="contentor ex4">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. gap: 30px</h2>
+      <div class="contentor ex5">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. flex-wrap: wrap</h2>
+      <div class="contentor ex6">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. flex-grow: 1</h2>
+      <div class="contentor ex7">
+        <div class="item">1</div>
+        <div class="item cresce">2 (cresce)</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,404 @@
+*{
+    padding : 0px;
+    margin : 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #da6c81;
+}
+
+/* ===== Header (igual ao da página principal) ===== */
+header{
+    background-color: #da6c81;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+header nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a{
+    background-color: #bf2b54;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: #cc456b;
+}
+
+/* ===== Main (todas as páginas) ===== */
+main{
+    background-color: #f5e9d0;
+    padding: 30px;
+    height: 100vh;
+}
+
+main section{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid #da6c81;
+}
+
+img{
+    width: 60%;
+    border-radius: 20px;
+}
+
+/* ===== Footer (igual ao da página principal) ===== */
+footer{
+    background-color: #da6c81;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Home: foto e texto lado a lado ===== */
+#home main{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#home main img{
+    width: 50%;
+}
+
+#home main section{
+    width: 35%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#home main h2{
+    color: #bf2b54;
+    font-size: 35px;
+}
+
+#home main p{
+    font-size: 20px;
+}
+
+/* ===== Outras páginas do Lab2 ===== */
+/* ===== Localização ===== */
+#localizacao header{background-color: #cc456b;}
+
+#localizacao main{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+#localizacao h2{
+    color: #bf2b54;
+    font-size: 40px;
+}
+
+/* no PC: texto ao lado do mapa */
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.conteudo section{
+    width: 40%;
+    font-size: 24px;
+    padding: 30px;
+}
+
+.conteudo iframe{
+    width: 60%;
+    height: 450px;
+    border: 4px solid #da6c81;
+    border-radius: 20px;
+}
+
+/* ===== Informação (display: grid) ===== */
+#info main{
+    height: auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "intro   intro   foto1"
+        "tabela  .       foto1"
+        "tabela  foto2   ."
+        "factos  factos  foto3";
+    gap: 30px;
+    align-items: center;
+}
+/* o "." no grid-template-areas = espaço vazio */
+
+#info .intro{  grid-area: intro;  }
+#info table{   grid-area: tabela; }
+#info aside{   grid-area: factos; }
+#info .foto1{  grid-area: foto1;  }
+#info .foto2{  grid-area: foto2;  }
+#info .foto3{  grid-area: foto3;  }
+
+#info h2{
+    color: #bf2b54;
+    font-size: 40px;
+}
+
+#info .intro p{
+    font-size: 20px;
+}
+
+#info main img{
+    width: 100%;
+    border-radius: 20px;
+    border: 4px solid #da6c81;
+}
+
+table, th, td{border: 1px solid #bf2b54; border-collapse: collapse; padding: 8px;}
+
+#info table{
+    background-color: white;
+    width: 100%;
+}
+
+#info th{
+    background-color: #da6c81;
+    color: white;
+}
+
+#info table a{
+    color: #bf2b54;
+}
+
+#info aside{
+    background-color: #bf2b54;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#info aside ul{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ===== Multimédia ===== */
+#multi main{
+    height: auto;
+    padding: 0px;
+}
+
+/* cada secção ocupa a tela inteira, como na landing page */
+#multi main section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border: none;
+    border-radius: 0px;
+    padding: 30px;
+}
+
+#multi h3{
+    font-size: 40px;
+}
+
+/* cores de fundo diferentes para cada secção */
+#multi .fotos{
+    background-color: #f5e9d0;
+}
+
+#multi .fotos h3{
+    color: #bf2b54;
+}
+
+#multi .poesia{
+    background-color: #da6c81;
+    color: white;
+}
+
+#multi .video{
+    background-color: #bf2b54;
+    color: white;
+}
+
+/* Fotografia emblemática com frase por cima */
+#multi .emblematica{
+    position: relative;
+    height: auto;
+    padding: 0px;
+}
+
+#multi .emblematica img{
+    width: 100%;
+    border-radius: 0px;
+}
+
+#multi .emblematica p{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 5vw;
+    color: white;
+    background-color: #da6c81;
+    border: 3px solid beige;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+/* Fotografias pequenas com transition */
+.Fotografias{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* miniaturas pequenas que crescem com o rato por cima */
+.Fotografias img{
+    width: 200px;
+    border-radius: 10px;
+    border: 4px solid #bf2b54;
+    transition: width 0.5s;
+}
+
+.Fotografias img:hover{
+    width: 260px;
+}
+
+/* ===== Efeito: vídeo como background ===== */
+#multi .video-fundo{
+    position: relative;
+}
+
+#multi .video-fundo video{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* o vídeo preenche a secção toda */
+}
+
+#multi .video-fundo h3{
+    position: relative;     /* fica por cima do vídeo */
+    color: white;
+    font-size: 6vw;
+    background-color: #bf2b54;
+    border: 3px solid beige;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+/* ===== Efeito: parallax ===== */
+#multi .parallax{
+    background-image: url(../../images/tokyo_imagem.jpg);
+    background-attachment: fixed;   /* a imagem fica parada ao fazer scroll */
+    background-size: cover;
+    background-position: center;
+}
+
+#multi .parallax h3{
+    color: white;
+    font-size: 6vw;
+    background-color: #da6c81;
+    border: 3px solid beige;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+#multi section ul{
+    list-style-type: none;
+    font-size: 28px;
+}
+
+#multi section iframe{
+    width: 70vw;
+    height: 40vw;
+    border-radius: 20px;
+}
+
+/* ===== Telemóvel ===== */
+@media(max-width: 600px){
+    #home main{
+        flex-direction: column;
+        height: auto;
+    }
+
+    #home main img{
+        width: 100%;
+    }
+
+    #home main section{
+        width: 100%;
+    }
+
+    #multi main section{
+        height: auto;
+    }
+
+    /* no telemóvel: texto por cima do mapa */
+    #localizacao main{
+        height: auto;
+        padding: 20px;
+    }
+
+    .conteudo{
+        flex-direction: column;
+    }
+
+    .conteudo section{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .conteudo iframe{
+        width: 100%;
+        height: 300px;
+    }
+
+    /* no telemóvel: uma coluna só, um elemento por linha */
+    #info main{
+        padding: 20px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "intro"
+            "foto1"
+            "tabela"
+            "foto2"
+            "factos"
+            "foto3";
+    }
+
+    #multi section ul{
+        font-size: 20px;
+    }
+}

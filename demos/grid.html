@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Grid layout - Ana Gabriela Nobre</title>
+    <style>
+      /* estilização dos filhos do contentor */
+      .contentor > * {
+        background-color: plum;
+        padding: 20px;
+        font-size: 2rem;
+      }
+
+      /* dar um nome de área a cada elemento */
+      header {
+        grid-area: header;
+      }
+      nav {
+        grid-area: menu;
+      }
+      main {
+        grid-area: main;
+      }
+      aside {
+        grid-area: aside;
+      }
+      footer {
+        grid-area: footer;
+      }
+
+      /* estilização do contentor grid */
+      div.contentor {
+        margin: 20px;
+        height: 600px;
+        background-color: purple;
+        display: grid;
+
+        grid-template-areas:
+          "header header header"
+          "menu   main   aside"
+          "menu   footer footer";
+        gap: 10px;
+        padding: 10px;
+
+        grid-template-columns: 20vw 3fr 2fr;
+        grid-template-rows: 15vh 1fr 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contentor">
+      <header>título</header>
+      <nav>menu</nav>
+      <main>conteúdo</main>
+      <aside>info</aside>
+      <footer>Ana Gabriela Nobre</footer>
+    </div>
+  </body>
+</html>

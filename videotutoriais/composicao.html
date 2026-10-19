@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Composição de seletores - Ana Gabriela Nobre</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f5e9d0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      section {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .caixa {
+        border: 2px dashed #da6c81;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #bf2b54;
+      }
+
+      p.aviso {
+        background-color: khaki;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .descendente p {
+        color: blue;
+      }
+
+      .filho > p {
+        color: green;
+      }
+
+      h3 + p {
+        font-weight: bold;
+        color: #bf2b54;
+      }
+
+      h4 ~ p {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Composição de seletores</h1>
+    <p>Por Ana Gabriela Nobre</p>
+
+    <section>
+      <h2>1. Agrupamento: h1, h2</h2>
+      <p>O h1 e todos os h2 desta página têm a mesma cor, com uma só regra.</p>
+    </section>
+
+    <section>
+      <h2>2. Tag + classe: p.aviso</h2>
+      <p class="aviso">Este parágrafo tem a classe aviso: fica com fundo.</p>
+      <span class="aviso"
+        >Este span também tem a classe aviso, mas não é um p: não muda.</span
+      >
+    </section>
+
+    <section>
+      <h2>3. Descendente (espaço): .descendente p</h2>
+      <div class="caixa descendente">
+        <p>Parágrafo dentro da caixa: azul.</p>
+        <div class="caixa">
+          <p>
+            Parágrafo dentro de outra div, mas ainda dentro da caixa: também
+            azul.
+          </p>
+        </div>
+      </div>
+      <p>Parágrafo fora da caixa: não muda.</p>
+    </section>
+
+    <section>
+      <h2>4. Filho direto (&gt;): .filho &gt; p</h2>
+      <div class="caixa filho">
+        <p>Parágrafo filho direto da caixa: verde.</p>
+        <div class="caixa">
+          <p>Parágrafo "neto" (dentro de outra div): não muda.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Irmão adjacente (+): h3 + p</h2>
+      <h3>Um título h3</h3>
+      <p>Este p vem logo a seguir ao h3: fica rosa e negrito.</p>
+      <p>Este p vem depois, mas não logo a seguir: não muda.</p>
+    </section>
+
+    <section>
+      <h2>6. Irmãos gerais (~): h4 ~ p</h2>
+      <p>Este p vem antes do h4: não muda.</p>
+      <h4>Um título h4</h4>
+      <p>Este p vem depois do h4: roxo.</p>
+      <p>Este também vem depois do h4: roxo.</p>
+    </section>
+  </body>
+</html>

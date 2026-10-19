@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipos de seletores CSS - Ana Gabriela Nobre</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f5e9d0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      h1 {
+        color: #bf2b54;
+      }
+
+      h2 {
+        color: #da6c81;
+        font-size: 20px;
+      }
+
+      section {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .destaque {
+        background-color: khaki;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      #especial {
+        border: 3px solid #bf2b54;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      a[target="_blank"] {
+        color: green;
+        font-weight: bold;
+      }
+
+      button {
+        background-color: #bf2b54;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 20px;
+        width: 200px;
+      }
+
+      button:hover {
+        background-color: #4caf50;
+      }
+
+      ul {
+        margin-left: 20px;
+      }
+
+      li:first-child {
+        color: #bf2b54;
+      }
+
+      li:nth-child(even) {
+        background-color: #fbf3e4;
+      }
+
+      .citacao::first-letter {
+        font-size: 40px;
+        color: #bf2b54;
+      }
+
+      .estrela::before {
+        content: "★ ";
+        color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tipos de seletores CSS</h1>
+    <p>Por Ana Gabriela Nobre</p>
+
+    <section>
+      <h2>1. Seletor universal: *</h2>
+      <p>
+        Todos os elementos desta página têm a letra Arial, por causa do seletor
+        *.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Seletor de tipo: h1, h2, section</h2>
+      <p>Todos os h2 são rosa e todas as section são caixas brancas.</p>
+    </section>
+
+    <section>
+      <h2>3. Seletor de classe: .destaque</h2>
+      <p>
+        Este texto é normal, mas
+        <span class="destaque">este tem a classe destaque</span>.
+      </p>
+      <p class="destaque">Uma classe pode ser usada em vários elementos.</p>
+    </section>
+
+    <section>
+      <h2>4. Seletor de id: #especial</h2>
+      <p id="especial">
+        Este parágrafo tem o id "especial". Um id só pode existir uma vez na
+        página.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Seletor de atributo: [target="_blank"]</h2>
+      <a href="https://www.google.com">Link normal</a>
+      <a href="https://www.google.com" target="_blank"
+        >Link que abre noutra aba (verde)</a
+      >
+    </section>
+
+    <section>
+      <h2>6. Pseudo-classes: :hover, :first-child, :nth-child</h2>
+      <button>Passa o rato por cima</button>
+      <ul>
+        <li>Primeiro item (rosa, :first-child)</li>
+        <li>Segundo item (fundo, :nth-child(even))</li>
+        <li>Terceiro item</li>
+        <li>Quarto item (fundo, :nth-child(even))</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Pseudo-elementos: ::first-letter, ::before</h2>
+      <p class="citacao">
+        Tóquio brilha ao anoitecer, mil luzes começam a aparecer.
+      </p>
+      <p class="estrela">Este parágrafo tem uma estrela criada pelo CSS.</p>
+    </section>
+  </body>
+</html>

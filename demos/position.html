@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Position - Ana Gabriela Nobre</title>
+    <style>
+      /* ===== Posição relativa ===== */
+      .caixas {
+        margin: 20px;
+      }
+
+      .caixas div {
+        border: 1px solid black;
+        padding: 10px;
+        background-color: dodgerblue;
+      }
+
+      .caixas div:last-child {
+        background-color: khaki;
+      }
+
+      .relativa {
+        position: relative;
+        top: 10px;
+        left: 20px;
+      }
+
+      /* ===== Posição absoluta ===== */
+      .fora {
+        background-color: salmon;
+        height: 100px;
+        position: relative;
+      }
+
+      .dentro {
+        background-color: grey;
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Posição relativa</h1>
+    <div class="caixas">
+      <div>1</div>
+      <div class="relativa">2 - Ana Gabriela Nobre</div>
+      <div>3</div>
+    </div>
+
+    <h1>Posição absoluta</h1>
+    <div class="fora">
+      <div class="dentro"></div>
+    </div>
+  </body>
+</html>

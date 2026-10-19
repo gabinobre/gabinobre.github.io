@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media query - Ana Gabriela Nobre</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f5e9d0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      h1,
+      h2 {
+        color: #bf2b54;
+      }
+
+      section {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .aviso {
+        background-color: #bf2b54;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .pequeno {
+        display: none;
+      }
+
+      .cartao {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: #fbf3e4;
+        border: 3px solid #da6c81;
+        border-radius: 15px;
+        padding: 20px;
+      }
+
+      .icone {
+        background-color: #da6c81;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+      }
+
+      .cartao h3 {
+        color: #bf2b54;
+        font-size: 24px;
+      }
+
+      .pagina {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "nav    main   aside"
+          "footer footer footer";
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 80px 200px 60px;
+        gap: 10px;
+      }
+
+      .pagina header {
+        grid-area: header;
+      }
+      .pagina nav {
+        grid-area: nav;
+      }
+      .pagina main {
+        grid-area: main;
+      }
+      .pagina aside {
+        grid-area: aside;
+      }
+      .pagina footer {
+        grid-area: footer;
+      }
+
+      .pagina > * {
+        background-color: #da6c81;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      .pagina main {
+        background-color: white;
+        color: #bf2b54;
+        border: 3px solid #da6c81;
+      }
+
+      @media (max-width: 600px) {
+        .grande {
+          display: none;
+        }
+
+        .pequeno {
+          display: block;
+        }
+
+        .cartao {
+          flex-direction: column;
+          background-color: #da6c81;
+          color: white;
+        }
+
+        .cartao h3 {
+          color: white;
+        }
+
+        .icone {
+          background-color: white;
+        }
+
+        .pagina {
+          grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+        }
+
+        .pagina > * {
+          background-color: #bf2b54;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Media query</h1>
+    <p>Por Ana Gabriela Nobre</p>
+
+    <p class="aviso grande">Ecrã grande: mais de 600px</p>
+    <p class="aviso pequeno">Ecrã pequeno: até 600px</p>
+
+    <section>
+      <h2>Parte 1: um componente simples</h2>
+      <div class="cartao">
+        <div class="icone"></div>
+        <div>
+          <h3>Tokyo na primavera</h3>
+          <p>
+            No computador, o ícone fica ao lado do texto. No telemóvel, fica por
+            cima e o cartão muda de cor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Parte 2: um layout responsivo</h2>
+      <div class="pagina">
+        <header>header</header>
+        <nav>nav</nav>
+        <main>main</main>
+        <aside>aside</aside>
+        <footer>footer: Ana Gabriela Nobre</footer>
+      </div>
+    </section>
+  </body>
+</html>
