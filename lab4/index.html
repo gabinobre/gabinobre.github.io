@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4 - Tokyo com eventos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tokyo interativa</h1>
+      <nav>
+        <a href="../index.html">Início</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2 id="titulo" onmouseover="entrar()" onmouseout="sair()">
+          Passa o rato por aqui
+        </h2>
+      </section>
+
+      <section>
+        <p id="frase">Pinta esta frase!</p>
+        <button onclick="pintar('#bf2b54')">Rosa</button>
+        <button onclick="pintar('purple')">Roxo</button>
+        <button onclick="pintar('green')">Verde</button>
+      </section>
+
+      <section>
+        <p id="aviso-foto">Faz duplo clique na foto!</p>
+        <img
+          id="foto"
+          src="images/fotografia.jpg"
+          alt="Torre de Tokyo"
+          ondblclick="aumentar()"
+        />
+      </section>
+
+      <section>
+        <div id="caixa" onmousemove="mexer(event)">
+          Mexe o rato dentro desta caixa
+        </div>
+      </section>
+
+      <section>
+        <button onclick="contar()">Conta!</button>
+        <span id="numero">0</span>
+      </section>
+    </main>
+
+    <footer>
+      <p>Ana Gabriela Nobre - DIW 2026</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
