@@ -102,3 +102,37 @@ article button {
 article button:hover {
   background-color: #cc456b;
 }
+
+/* ===== Cesto ===== */
+#cesto h2 {
+  color: #bf2b54;
+  font-size: 35px;
+  text-align: center;
+}
+
+#cesto div {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+#cesto article h3 {
+  color: #bf2b54;
+}
+
+#cesto article p {
+  font-style: normal;
+  color: #bf2b54;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#total {
+  text-align: center;
+  color: #bf2b54;
+  font-size: 28px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
