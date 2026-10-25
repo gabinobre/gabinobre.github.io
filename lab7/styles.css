@@ -1,4 +1,3 @@
-/* ===== Geral ===== */
 * {
   margin: 0px;
   padding: 0px;
@@ -10,7 +9,6 @@ body {
   background-color: #f5e9d0;
 }
 
-/* ===== Cabeçalho: Loja à esquerda, menu à direita ===== */
 header {
   background-color: #da6c81;
   color: white;
@@ -39,7 +37,6 @@ nav a:hover {
   background-color: #cc456b;
 }
 
-/* ===== Lista de produtos ===== */
 #produtos div {
   padding: 40px;
   display: flex;
@@ -48,7 +45,6 @@ nav a:hover {
   gap: 25px;
 }
 
-/* ===== Cada produto (cartão) ===== */
 article {
   background-color: white;
   border: 3px solid #da6c81;
@@ -71,21 +67,18 @@ article img {
   width: 150px;
 }
 
-/* descrição */
 article p:nth-of-type(1) {
   font-size: 13px;
   font-style: italic;
   color: grey;
 }
 
-/* preço */
 article p:nth-of-type(2) {
   color: #bf2b54;
   font-size: 20px;
   font-weight: bold;
 }
 
-/* ===== Rodapé ===== */
 footer {
   background-color: #da6c81;
   padding: 20px;
@@ -103,7 +96,6 @@ article button:hover {
   background-color: #cc456b;
 }
 
-/* ===== Cesto ===== */
 #cesto h2 {
   color: #bf2b54;
   font-size: 35px;
